@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFilosofi">
-        <activity android:name=".chipNavigation"/>
+        <activity android:name=".HomeFragment"/>
+        <activity android:name=".ProfileFragment"/>
+        <activity android:name=".NotifyFragment"/>
+        <activity android:name=".ShopFragment"/>
+        <activity android:name=".FeedFragment"/>
         <activity android:name=".login">
             <intent-filter>
             <action android:name="android.intent.action.MAIN" />

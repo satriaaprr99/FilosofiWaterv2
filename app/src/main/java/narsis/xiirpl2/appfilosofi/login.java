@@ -20,7 +20,7 @@ public class login extends AppCompatActivity {
         login_butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login.this, chipNavigation.class);
+                Intent intent = new Intent(login.this, HomeFragment.class);
                 startActivity(intent);
             }
         });
