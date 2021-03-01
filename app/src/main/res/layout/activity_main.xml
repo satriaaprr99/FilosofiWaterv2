@@ -42,21 +42,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <RadioButton
-            android:id="@+id/jenisgelas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gelas" />
-        <RadioButton
-            android:id="@+id/jenisbotol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Botol" />
-        <RadioButton
-            android:id="@+id/jenisgalon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Galon" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

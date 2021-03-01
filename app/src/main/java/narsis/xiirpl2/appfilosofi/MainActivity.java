@@ -20,7 +20,6 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     EditText nama,jenis,harga,stok;
-    RadioButton gelas,botol,galon;
     Button btntambah;
     ProgressDialog pd;
 
@@ -31,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         nama  = (EditText) findViewById(R.id.namabarang);
         jenis  = (EditText) findViewById(R.id.jenisbarang);
-        gelas = (RadioButton) findViewById(R.id.jenisgelas);
-        botol = (RadioButton) findViewById(R.id.jenisbotol);
-        galon = (RadioButton) findViewById(R.id.jenisgalon);
         harga = (EditText) findViewById(R.id.hargabarang);
         stok  = (EditText) findViewById(R.id.stokbarang);
         btntambah = (Button) findViewById(R.id.btn_tambahbarang);
@@ -49,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 String sharga = harga.getText().toString();
                 String sstok  = stok.getText().toString();
                 String sjenis = jenis.getText().toString();
+
                 ApiRequest api = FilosofiServer.getClient().create(ApiRequest.class);
 
                 Call<ResponsModel> sendbarang = api.sendData(snama,sjenis,sharga,sstok);

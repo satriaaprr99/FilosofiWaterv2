@@ -1,13 +1,14 @@
 package narsis.xiirpl2.appfilosofi.model;
 
 public class ResponsModel {
-    String status,message;
+    String message;
+    int status;
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
