@@ -3,17 +3,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="@color/white"
     tools:context=".HomeFragment">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HOMEPAGE"
-        android:paddingTop="350dp"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="50dp"
-        />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnnote"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/ic_baseline_note_24" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnnote"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="262dp"
+            android:textAlignment="center"
+            android:text="Rekap Data" />
+
+        <Button
+            android:id="@+id/btnshop"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_toEndOf="@+id/btnnote"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_baseline_add_shopping_cart_24" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnshop"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="262dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="Pesan Barang" />
+
+        <Button
+            android:id="@+id/btnshop2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="25dp"
+            android:layout_toEndOf="@+id/btnshop"
+            android:background="@drawable/ic_baseline_add_to_queue_24" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnshop2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="262dp"
+            android:text="Tambah Data"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
 
 </FrameLayout>
