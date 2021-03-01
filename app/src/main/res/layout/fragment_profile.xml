@@ -16,6 +16,22 @@
         android:textStyle="bold"
         android:textSize="50dp"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="Tambah Data Barang"/>
+
+    </LinearLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_bottom"
         android:layout_width="match_parent"
@@ -25,4 +41,5 @@
         android:elevation="16dp"
         android:padding="5dp"
         app:menu="@menu/menu_bottom"/>
+
 </RelativeLayout>

@@ -13,5 +13,4 @@ public interface ApiRequest {
                                 @Field("jenis_barang") String jenis,
                                 @Field("harga") String harga,
                                 @Field("stok") String stok);
-
 }

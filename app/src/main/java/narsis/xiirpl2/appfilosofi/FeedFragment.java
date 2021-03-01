@@ -15,13 +15,13 @@ import android.view.ViewGroup;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FeedFragment extends AppCompatActivity {
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_feed);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.menu_bottom);
-
         bottomNavigationView.setSelectedItemId(R.id.feed);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
