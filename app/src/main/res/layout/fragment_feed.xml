@@ -24,6 +24,8 @@
         android:background="@drawable/rounded"
         android:elevation="16dp"
         android:padding="5dp"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:menu="@menu/menu_bottom"/>
 
 </RelativeLayout>
