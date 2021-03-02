@@ -7,8 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class login extends AppCompatActivity {
-
+public class Login extends AppCompatActivity {
     Button login_butt;
 
     @Override
@@ -20,7 +19,7 @@ public class login extends AppCompatActivity {
         login_butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login.this, HomeFragment.class);
+                Intent intent = new Intent(Login.this, HomeFragment.class);
                 startActivity(intent);
             }
         });

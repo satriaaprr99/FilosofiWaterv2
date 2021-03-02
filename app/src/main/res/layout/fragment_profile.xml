@@ -36,6 +36,7 @@
             android:textColor="@color/white"
             />
     <LinearLayout
+        android:id="@+id/scan"
         android:layout_below="@+id/nama"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
@@ -58,6 +59,16 @@
             android:text="RP.1.000.000,00"
             android:textSize="18dp"
             android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

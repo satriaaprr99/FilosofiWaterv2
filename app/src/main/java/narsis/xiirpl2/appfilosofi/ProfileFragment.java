@@ -11,23 +11,26 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfileFragment extends AppCompatActivity {
+    Button btnadd;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_profile);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.menu_bottom);
-
         bottomNavigationView.setSelectedItemId(R.id.profile);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.homepage:
+                        startActivity(new Intent(getApplicationContext(), HomeFragment.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.feed:
                         startActivity(new Intent(getApplicationContext(), FeedFragment.class));
@@ -45,6 +48,15 @@ public class ProfileFragment extends AppCompatActivity {
                         return true;
                 }
                 return false;
+            }
+        });
+
+        btnadd = findViewById(R.id.btnadd);
+        btnadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileFragment.this, AddBarang.class);
+                startActivity(intent);
             }
         });
     }
