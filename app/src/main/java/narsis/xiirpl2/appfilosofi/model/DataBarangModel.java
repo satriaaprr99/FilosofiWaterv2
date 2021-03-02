@@ -1,9 +1,8 @@
 package narsis.xiirpl2.appfilosofi.model;
 
 public class DataBarangModel {
-    String id_barang,nama_barang,jenis_barang,harga;
+    String id_barang,nama_barang,jenis_barang,harga,stok;
     String created_at,updated_at;
-    int stok;
 
     public String getId_barang() {
         return id_barang;
@@ -53,11 +52,11 @@ public class DataBarangModel {
         this.updated_at = updated_at;
     }
 
-    public int getStok() {
+    public String getStok() {
         return stok;
     }
 
-    public void setStok(int stok) {
+    public void setStok(String stok) {
         this.stok = stok;
     }
 }

@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppFilosofi">
+        android:theme="@style/Theme.AppFilosofi"
+        android:usesCleartextTraffic="true">
         <activity android:name=".HomeFragment"/>
         <activity android:name=".ProfileFragment"/>
         <activity android:name=".NotifyFragment"/>

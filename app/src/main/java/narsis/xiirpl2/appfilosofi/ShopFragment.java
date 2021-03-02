@@ -98,6 +98,7 @@ public class ShopFragment extends AppCompatActivity {
             public void onFailure(Call<ResponsModel> call, Throwable t) {
                 pd.hide();
                 Log.d("RETRO", "FAILED : Respon Gagal");
+                Log.d("RETRO", t.getMessage());
             }
         });
     }
