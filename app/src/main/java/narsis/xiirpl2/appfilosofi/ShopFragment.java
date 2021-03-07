@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -37,6 +38,7 @@ public class ShopFragment extends AppCompatActivity {
     private List<DataBarangModel> mitems = new ArrayList<>();
     ProgressDialog pd;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_shop);
@@ -49,10 +51,6 @@ public class ShopFragment extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.homepage:
                         startActivity(new Intent(getApplicationContext(), HomeFragment.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.feed:
-                        startActivity(new Intent(getApplicationContext(), FeedFragment.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.shop:

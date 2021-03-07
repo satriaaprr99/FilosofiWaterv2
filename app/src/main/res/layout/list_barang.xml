@@ -1,117 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
     app:cardElevation="6dp"
-    app:cardCornerRadius="10dp">
+    android:padding="5dp"
+    android:layout_margin="10dp">
 
-    <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="match_parent">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/rounded"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginLeft="100dp"
-        android:padding="10dp">
+        android:background="@drawable/cardview_bg">
+
+        <ImageView
+            android:id="@+id/imggalon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/cardview_bg"
+            android:padding="10dp"
+            android:src="@drawable/ic_gallon" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/cardname"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="100dp"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="Nama Barang"/>
-
-            <TextView
-                android:layout_width="5dp"
-                android:layout_height="wrap_content"
-                android:text=":"/>
 
             <TextView
                 android:id="@+id/tvNama"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Jenis "/>
-
-            <TextView
-                android:layout_width="5dp"
-                android:layout_height="wrap_content"
-                android:text=":"/>
+                android:text="AQUA"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvJenis"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Harga "/>
-
-            <TextView
-                android:layout_width="5dp"
-                android:layout_height="wrap_content"
-                android:text=":"/>
-
-            <TextView
-                android:id="@+id/tvHarga"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="Stok "/>
-
-            <TextView
-                android:layout_width="5dp"
-                android:layout_height="wrap_content"
-                android:text=":"/>
+                android:text="JENIS"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvStok"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
+                android:layout_height="wrap_content"
+                android:text="Stok"
+                android:textSize="10dp" />
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp." />
+
+            <TextView
+                android:id="@+id/tvHarga"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="Harga"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>

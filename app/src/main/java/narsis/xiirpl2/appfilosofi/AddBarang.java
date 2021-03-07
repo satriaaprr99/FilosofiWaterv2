@@ -41,10 +41,6 @@ public class AddBarang extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), HomeFragment.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.feed:
-                        startActivity(new Intent(getApplicationContext(), FeedFragment.class));
-                        overridePendingTransition(0,0);
-                        return true;
                     case R.id.shop:
                         startActivity(new Intent(getApplicationContext(), ShopFragment.class));
                         overridePendingTransition(0,0);

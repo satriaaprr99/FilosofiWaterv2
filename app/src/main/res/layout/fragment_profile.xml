@@ -1,85 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context=".ProfileFragment">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/bg_bg"/>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/imgProfile"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardCornerRadius="100dp"
-        android:layout_marginTop="15dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_centerHorizontal="true">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/profile_bg"
-            android:src="@drawable/ic_baseline_person_24"/>
-    </androidx.cardview.widget.CardView>
-        <TextView
-            android:layout_below="@+id/imgProfile"
-            android:id="@+id/nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="20dp"
-            android:text="SATRIA PUTRA RAMDHAN"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            />
-    <LinearLayout
-        android:id="@+id/scan"
-        android:layout_below="@+id/nama"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:orientation="horizontal"
-        android:background="@drawable/scan_bg">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_qr_code_scan"
-            android:layout_gravity="center"
-            android:layout_marginLeft="25dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:layout_marginLeft="20dp"
-            android:text="RP.1.000.000,00"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/scan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/btnadd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="66dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/bg_bg" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/profile_bg"
+                    android:src="@drawable/ic_baseline_person_24" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgProfile"
+                android:layout_marginTop="20dp"
+                android:text="SATRIA PUTRA RAMDHAN"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:id="@+id/scan"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/nama"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/scan_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/ic_qr_code_scan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="RP.1.000.000,00"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/txtcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scan"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="E-Mail">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableLeft="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="10dp"
+                        android:text="satriaramadhan@gmail.com" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="10dp"
+                        android:text="smkn4bdg" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="No Handphone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                        android:drawablePadding="10dp"
+                        android:text="087824276382" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Ruangan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableLeft="@drawable/ic_baseline_sensor_door_24"
+                        android:drawablePadding="10dp"
+                        android:text="Technopark" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtcontainer"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Edit"
+                    android:textColor="@color/purple_500" />
+
+                <Button
+                    android:id="@+id/btnadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/purple_500"
+                    android:text="Tambah Data" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Log Out"
+                    android:textColor="@android:color/holo_red_light" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_bottom"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/rounded"
         android:elevation="16dp"
         android:padding="5dp"
-        app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
-        app:menu="@menu/menu_bottom"/>
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_bottom" />
 </RelativeLayout>
