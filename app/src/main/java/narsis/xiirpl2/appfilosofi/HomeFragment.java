@@ -29,10 +29,6 @@ public class HomeFragment extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.homepage:
                         return true;
-                    case R.id.feed:
-                        startActivity(new Intent(getApplicationContext(), FeedFragment.class));
-                        overridePendingTransition(0,0);
-                        return true;
                     case R.id.shop:
                         startActivity(new Intent(getApplicationContext(), ShopFragment.class));
                         overridePendingTransition(0,0);
