@@ -1,9 +1,12 @@
 package narsis.xiirpl2.appfilosofi.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,12 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import narsis.xiirpl2.appfilosofi.PesanActivity;
 import narsis.xiirpl2.appfilosofi.R;
 import narsis.xiirpl2.appfilosofi.model.DataBarangModel;
 
 public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.HolderData> {
     private List<DataBarangModel> mlist;
     private Context ctx;
+    RelativeLayout cardview;
 
     public AdapterDataBarang (Context ctx, List<DataBarangModel> mlist){
         this.mlist = mlist;
@@ -33,11 +38,22 @@ public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.Ho
 
     @Override
     public void onBindViewHolder(@NonNull HolderData holder, int position) {
-        DataBarangModel dm = mlist.get(position);
+        final DataBarangModel dm = mlist.get(position);
         holder.nama.setText(dm.getNama_barang());
         holder.jenis.setText(dm.getJenis_barang());
         holder.harga.setText(dm.getHarga());
         holder.stok.setText(dm.getStok());
+
+        holder.relative.setOnClickListener((v) -> {
+            Intent intent = new Intent(ctx, PesanActivity.class);
+
+            intent.putExtra("nama", dm.getNama_barang());
+            intent.putExtra("jenis", dm.getJenis_barang());
+            intent.putExtra("stok", dm.getStok());
+            intent.putExtra("harga", dm.getHarga());
+
+            ctx.startActivity(intent);
+        });
     }
 
     @Override
@@ -47,9 +63,11 @@ public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.Ho
 
     class HolderData extends RecyclerView.ViewHolder{
         TextView nama, jenis, harga, stok;
+        RelativeLayout relative;
 
-        public HolderData (View v){
+        public HolderData (@NonNull View v){
             super(v);
+            relative = v.findViewById(R.id.relative);
             nama  = v.findViewById(R.id.tvNama);
             jenis = v.findViewById(R.id.tvJenis);
             harga = v.findViewById(R.id.tvHarga);
