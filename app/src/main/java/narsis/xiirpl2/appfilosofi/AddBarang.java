@@ -77,7 +77,6 @@ public class AddBarang extends AppCompatActivity {
                 String sjenis = jenis.getText().toString();
 
                 ApiRequest api = FilosofiServer.getClient().create(ApiRequest.class);
-
                 Call<ResponsModel> sendbarang = api.sendData(snama,sjenis,sharga,sstok);
                 sendbarang.enqueue(new Callback<ResponsModel>() {
                     @Override
@@ -89,9 +88,6 @@ public class AddBarang extends AppCompatActivity {
                             Toast.makeText(AddBarang.this, "Data Berhasil Disimpan!", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(AddBarang.this, "Error! Data Gagal Disimpan!", Toast.LENGTH_SHORT).show();
-                        }
-                        if(response.isSuccessful()){
-                            Toast.makeText(AddBarang.this, "Response Success!", Toast.LENGTH_SHORT).show();
                         }
                     }
 

@@ -1,5 +1,6 @@
 package narsis.xiirpl2.appfilosofi.api;
 
+import narsis.xiirpl2.appfilosofi.model.LoginResponse;
 import narsis.xiirpl2.appfilosofi.model.ResponsModel;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -17,4 +18,9 @@ public interface ApiRequest {
 
     @GET("barang")
     Call<ResponsModel> getData();
+
+    @FormUrlEncoded
+    @POST("login")
+    Call<LoginResponse> userLogin(@Field("email") String email,
+                                  @Field("password") String password);
 }

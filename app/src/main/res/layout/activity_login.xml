@@ -34,7 +34,8 @@
             android:hint="email"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
+            android:paddingBottom="10dp"
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/pass"
@@ -47,7 +48,8 @@
             android:hint="Password"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
+            android:paddingBottom="10dp"
+            android:inputType="textPassword"/>
 
         <TextView
             android:layout_width="wrap_content"
