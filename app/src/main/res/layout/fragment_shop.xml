@@ -48,7 +48,6 @@
                 android:layout_height="510dp" />
         </FrameLayout>
     </ScrollView>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_bottom"
         android:layout_width="match_parent"
