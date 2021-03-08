@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,7 @@ import narsis.xiirpl2.appfilosofi.model.DataBarangModel;
 public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.HolderData> {
     private List<DataBarangModel> mlist;
     private Context ctx;
+    RelativeLayout cardview;
 
     public AdapterDataBarang (Context ctx, List<DataBarangModel> mlist){
         this.mlist = mlist;
@@ -41,7 +44,7 @@ public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.Ho
         holder.harga.setText(dm.getHarga());
         holder.stok.setText(dm.getStok());
 
-        holder.nama.setOnClickListener((v) -> {
+        holder.relative.setOnClickListener((v) -> {
             Intent intent = new Intent(ctx, PesanActivity.class);
 
             intent.putExtra("nama", dm.getNama_barang());
@@ -60,9 +63,11 @@ public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.Ho
 
     class HolderData extends RecyclerView.ViewHolder{
         TextView nama, jenis, harga, stok;
+        RelativeLayout relative;
 
         public HolderData (@NonNull View v){
             super(v);
+            relative = v.findViewById(R.id.relative);
             nama  = v.findViewById(R.id.tvNama);
             jenis = v.findViewById(R.id.tvJenis);
             harga = v.findViewById(R.id.tvHarga);
