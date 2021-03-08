@@ -1,6 +1,7 @@
 package narsis.xiirpl2.appfilosofi.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import narsis.xiirpl2.appfilosofi.PesanActivity;
 import narsis.xiirpl2.appfilosofi.R;
 import narsis.xiirpl2.appfilosofi.model.DataBarangModel;
 
@@ -33,11 +35,22 @@ public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.Ho
 
     @Override
     public void onBindViewHolder(@NonNull HolderData holder, int position) {
-        DataBarangModel dm = mlist.get(position);
+        final DataBarangModel dm = mlist.get(position);
         holder.nama.setText(dm.getNama_barang());
         holder.jenis.setText(dm.getJenis_barang());
         holder.harga.setText(dm.getHarga());
         holder.stok.setText(dm.getStok());
+
+        holder.nama.setOnClickListener((v) -> {
+            Intent intent = new Intent(ctx, PesanActivity.class);
+
+            intent.putExtra("nama", dm.getNama_barang());
+            intent.putExtra("jenis", dm.getJenis_barang());
+            intent.putExtra("stok", dm.getStok());
+            intent.putExtra("harga", dm.getHarga());
+
+            ctx.startActivity(intent);
+        });
     }
 
     @Override
@@ -48,7 +61,7 @@ public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.Ho
     class HolderData extends RecyclerView.ViewHolder{
         TextView nama, jenis, harga, stok;
 
-        public HolderData (View v){
+        public HolderData (@NonNull View v){
             super(v);
             nama  = v.findViewById(R.id.tvNama);
             jenis = v.findViewById(R.id.tvJenis);

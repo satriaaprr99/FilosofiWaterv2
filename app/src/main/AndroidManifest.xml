@@ -26,6 +26,7 @@
         <activity android:name=".AddBarang" />
         <activity android:name=".Login"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".PesanActivity"/>
     </application>
 
 </manifest>
