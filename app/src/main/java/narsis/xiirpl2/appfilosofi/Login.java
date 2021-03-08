@@ -76,7 +76,12 @@ public class Login extends AppCompatActivity {
                         Log.d("RETRO", "response : " + response.body().toString());
                         String status = response.body().getMessage();
                         if(status.equals("Login Success")){
-                            startActivity(new Intent(Login.this, HomeFragment.class));
+                            Intent intent = new Intent(Login.this, HomeFragment.class);
+                            intent.putExtra("nama", response.body().getMessage());
+                            intent.putExtra("email", response.body().getMessage());
+                            intent.putExtra("nohp", response.body().getStatus());
+                            startActivity(intent);
+
                             Toast.makeText(Login.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(Login.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
