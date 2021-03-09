@@ -14,9 +14,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class ProfileFragment extends AppCompatActivity {
     Button btnadd;
+    TextInputEditText nama,email,nohp;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,13 @@ public class ProfileFragment extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        nama = findViewById(R.id.txtnama);
+        email = findViewById(R.id.txtemail);
+        nohp = findViewById(R.id.txtnohp);
+
+
 
         btnadd = findViewById(R.id.btnadd);
         btnadd.setOnClickListener(new View.OnClickListener() {

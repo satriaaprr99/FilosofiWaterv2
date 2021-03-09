@@ -21,7 +21,6 @@ import narsis.xiirpl2.appfilosofi.model.DataBarangModel;
 public class AdapterDataBarang extends RecyclerView.Adapter<AdapterDataBarang.HolderData> {
     private List<DataBarangModel> mlist;
     private Context ctx;
-    RelativeLayout cardview;
 
     public AdapterDataBarang (Context ctx, List<DataBarangModel> mlist){
         this.mlist = mlist;
