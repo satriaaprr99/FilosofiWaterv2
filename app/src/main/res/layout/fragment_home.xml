@@ -16,6 +16,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/purple_500">
             <TextView
+                android:id="@+id/emailtxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="WaterBreak"
@@ -28,11 +29,11 @@
 
         <Button
             android:id="@+id/btnnote"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="100dp"
             android:background="@drawable/ic_baseline_note_24" />
 
@@ -48,36 +49,34 @@
 
         <Button
             android:id="@+id/btnshop"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="100dp"
-            android:layout_toEndOf="@+id/btnnote"
             android:layout_centerHorizontal="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="101dp"
+            android:layout_toEndOf="@+id/btnnote"
             android:background="@drawable/ic_baseline_add_shopping_cart_24" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnshop"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="262dp"
             android:layout_centerHorizontal="true"
-            android:textAlignment="center"
-            android:text="Pesan Barang" />
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="262dp"
+            android:text="Pesan Barang"
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/btnshop2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="25dp"
-            android:layout_toEndOf="@+id/btnshop"
+            android:layout_marginTop="105dp"
+            android:layout_marginEnd="35dp"
             android:background="@drawable/ic_baseline_add_to_queue_24" />
 
         <TextView
@@ -92,6 +91,14 @@
             android:text="Tambah Data"
             android:textAlignment="center" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_bottom"
         android:layout_width="match_parent"

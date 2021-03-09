@@ -1,8 +1,11 @@
 package narsis.xiirpl2.appfilosofi.model;
 
+import java.util.List;
+
 public class LoginResponse {
     private String status,message;
     private UserModel user;
+    List<UserModel> userlist;
 
     public String getStatus() {
         return status;
@@ -26,5 +29,13 @@ public class LoginResponse {
 
     public void setUser(UserModel user) {
         this.user = user;
+    }
+
+    public List<UserModel> getUserlist() {
+        return userlist;
+    }
+
+    public void setUserlist(List<UserModel> userlist) {
+        this.userlist = userlist;
     }
 }
