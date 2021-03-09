@@ -9,8 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="15dp">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/actionbar"
@@ -34,8 +33,9 @@
             android:layout_gravity="center_horizontal"
             android:paddingBottom="20dp"
             android:text="Tambah Data Barang"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"/>
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
 
         <EditText
             android:id="@+id/namabarang"
@@ -47,7 +47,8 @@
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:layout_marginTop="20dp"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="10dp"
+            android:layout_gravity="center_horizontal"/>
 
         <EditText
             android:id="@+id/jenisbarang"
@@ -59,7 +60,8 @@
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
 
         <EditText
             android:id="@+id/hargabarang"
@@ -71,7 +73,8 @@
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
 
         <EditText
             android:id="@+id/stokbarang"
@@ -83,7 +86,8 @@
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal" />
 
         <Button
             android:id="@+id/btn_tambahbarang"
